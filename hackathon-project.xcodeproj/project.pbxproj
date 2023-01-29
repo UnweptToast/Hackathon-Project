@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB1E8F78298652DD00BF2972 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F77298652DD00BF2972 /* AuthManager.swift */; };
+		BB1E8F7A298652E300BF2972 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F79298652E300BF2972 /* DataManager.swift */; };
+		BB1E8F7C298652F000BF2972 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F7B298652F000BF2972 /* UserProfile.swift */; };
+		BB1E8F7E298652F600BF2972 /* UserEnvObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F7D298652F600BF2972 /* UserEnvObject.swift */; };
+		BB1E8F852986535C00BF2972 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F842986535C00BF2972 /* AuthView.swift */; };
+		BB1E8F872986536600BF2972 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F862986536600BF2972 /* LoginView.swift */; };
+		BB1E8F892986536B00BF2972 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F882986536B00BF2972 /* SignUpView.swift */; };
+		BB1E8F8B2986538800BF2972 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F8A2986538800BF2972 /* PhotoPicker.swift */; };
+		BB1E8F8D2986539900BF2972 /* DonateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F8C2986539900BF2972 /* DonateView.swift */; };
+		BB1E8F8F2986539F00BF2972 /* DonateTabview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F8E2986539F00BF2972 /* DonateTabview.swift */; };
+		BB1E8F91298653A700BF2972 /* DonationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F90298653A700BF2972 /* DonationsView.swift */; };
+		BB1E8F93298653AD00BF2972 /* DonationsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F92298653AD00BF2972 /* DonationsTabView.swift */; };
+		BB1E8F952986546300BF2972 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB1E8F942986546300BF2972 /* GoogleService-Info.plist */; };
+		BB8C9C19298651CB007E7E57 /* hackathon_projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C9C18298651CB007E7E57 /* hackathon_projectApp.swift */; };
+		BB8C9C1D298651CB007E7E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8C9C1C298651CB007E7E57 /* Assets.xcassets */; };
+		BB8C9C20298651CB007E7E57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8C9C1F298651CB007E7E57 /* Preview Assets.xcassets */; };
+		F72D44D755C40A2738904951 /* Pods_hackathon_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF9B83585FA8C3A937D68C4 /* Pods_hackathon_project.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6DF9B83585FA8C3A937D68C4 /* Pods_hackathon_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		757EEFAF7C099F26BE153498 /* Pods-hackathon-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-project.release.xcconfig"; path = "Target Support Files/Pods-hackathon-project/Pods-hackathon-project.release.xcconfig"; sourceTree = "<group>"; };
+		B2BFB60C3539F66FE9E3F0A1 /* Pods-hackathon-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-project.debug.xcconfig"; path = "Target Support Files/Pods-hackathon-project/Pods-hackathon-project.debug.xcconfig"; sourceTree = "<group>"; };
+		BB1E8F77298652DD00BF2972 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		BB1E8F79298652E300BF2972 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BB1E8F7B298652F000BF2972 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		BB1E8F7D298652F600BF2972 /* UserEnvObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEnvObject.swift; sourceTree = "<group>"; };
+		BB1E8F842986535C00BF2972 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		BB1E8F862986536600BF2972 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BB1E8F882986536B00BF2972 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		BB1E8F8A2986538800BF2972 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		BB1E8F8C2986539900BF2972 /* DonateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateView.swift; sourceTree = "<group>"; };
+		BB1E8F8E2986539F00BF2972 /* DonateTabview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateTabview.swift; sourceTree = "<group>"; };
+		BB1E8F90298653A700BF2972 /* DonationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsView.swift; sourceTree = "<group>"; };
+		BB1E8F92298653AD00BF2972 /* DonationsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsTabView.swift; sourceTree = "<group>"; };
+		BB1E8F942986546300BF2972 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BB1E8F96298654AC00BF2972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BB8C9C15298651CB007E7E57 /* hackathon-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hackathon-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8C9C18298651CB007E7E57 /* hackathon_projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackathon_projectApp.swift; sourceTree = "<group>"; };
+		BB8C9C1C298651CB007E7E57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB8C9C1F298651CB007E7E57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB8C9C12298651CB007E7E57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72D44D755C40A2738904951 /* Pods_hackathon_project.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FA0D4432ACC16C3366E3E6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2BFB60C3539F66FE9E3F0A1 /* Pods-hackathon-project.debug.xcconfig */,
+				757EEFAF7C099F26BE153498 /* Pods-hackathon-project.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B23C7A8677B175D3560BF43E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DF9B83585FA8C3A937D68C4 /* Pods_hackathon_project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB1E8F74298652B500BF2972 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB1E8F7B298652F000BF2972 /* UserProfile.swift */,
+				BB1E8F7D298652F600BF2972 /* UserEnvObject.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BB1E8F75298652C100BF2972 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB1E8F822986531400BF2972 /* Auth */,
+				BB1E8F812986530E00BF2972 /* Donor */,
+				BB1E8F802986530900BF2972 /* Charity */,
+				BB1E8F7F2986530400BF2972 /* Volunteer */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB1E8F76298652C800BF2972 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BB1E8F77298652DD00BF2972 /* AuthManager.swift */,
+				BB1E8F79298652E300BF2972 /* DataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BB1E8F7F2986530400BF2972 /* Volunteer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Volunteer;
+			sourceTree = "<group>";
+		};
+		BB1E8F802986530900BF2972 /* Charity */ = {
+			isa = PBXGroup;
+			children = (
+				BB1E8F90298653A700BF2972 /* DonationsView.swift */,
+				BB1E8F92298653AD00BF2972 /* DonationsTabView.swift */,
+			);
+			path = Charity;
+			sourceTree = "<group>";
+		};
+		BB1E8F812986530E00BF2972 /* Donor */ = {
+			isa = PBXGroup;
+			children = (
+				BB1E8F8C2986539900BF2972 /* DonateView.swift */,
+				BB1E8F8E2986539F00BF2972 /* DonateTabview.swift */,
+			);
+			path = Donor;
+			sourceTree = "<group>";
+		};
+		BB1E8F822986531400BF2972 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				BB1E8F842986535C00BF2972 /* AuthView.swift */,
+				BB1E8F862986536600BF2972 /* LoginView.swift */,
+				BB1E8F882986536B00BF2972 /* SignUpView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		BB8C9C0C298651CB007E7E57 = {
+			isa = PBXGroup;
+			children = (
+				BB8C9C17298651CB007E7E57 /* hackathon-project */,
+				BB8C9C16298651CB007E7E57 /* Products */,
+				0FA0D4432ACC16C3366E3E6A /* Pods */,
+				B23C7A8677B175D3560BF43E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BB8C9C16298651CB007E7E57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB8C9C15298651CB007E7E57 /* hackathon-project.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB8C9C17298651CB007E7E57 /* hackathon-project */ = {
+			isa = PBXGroup;
+			children = (
+				BB1E8F96298654AC00BF2972 /* Info.plist */,
+				BB1E8F942986546300BF2972 /* GoogleService-Info.plist */,
+				BB8C9C18298651CB007E7E57 /* hackathon_projectApp.swift */,
+				BB1E8F76298652C800BF2972 /* Managers */,
+				BB1E8F75298652C100BF2972 /* Views */,
+				BB1E8F74298652B500BF2972 /* Models */,
+				BB8C9C1C298651CB007E7E57 /* Assets.xcassets */,
+				BB8C9C1E298651CB007E7E57 /* Preview Content */,
+				BB1E8F8A2986538800BF2972 /* PhotoPicker.swift */,
+			);
+			path = "hackathon-project";
+			sourceTree = "<group>";
+		};
+		BB8C9C1E298651CB007E7E57 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BB8C9C1F298651CB007E7E57 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB8C9C14298651CB007E7E57 /* hackathon-project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB8C9C23298651CB007E7E57 /* Build configuration list for PBXNativeTarget "hackathon-project" */;
+			buildPhases = (
+				D430CF74EAA6079A28730948 /* [CP] Check Pods Manifest.lock */,
+				BB8C9C11298651CB007E7E57 /* Sources */,
+				BB8C9C12298651CB007E7E57 /* Frameworks */,
+				BB8C9C13298651CB007E7E57 /* Resources */,
+				A2E2D42867334D3A8AB1E4CD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hackathon-project";
+			productName = "hackathon-project";
+			productReference = BB8C9C15298651CB007E7E57 /* hackathon-project.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB8C9C0D298651CB007E7E57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					BB8C9C14298651CB007E7E57 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = BB8C9C10298651CB007E7E57 /* Build configuration list for PBXProject "hackathon-project" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB8C9C0C298651CB007E7E57;
+			productRefGroup = BB8C9C16298651CB007E7E57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB8C9C14298651CB007E7E57 /* hackathon-project */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB8C9C13298651CB007E7E57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8C9C20298651CB007E7E57 /* Preview Assets.xcassets in Resources */,
+				BB1E8F952986546300BF2972 /* GoogleService-Info.plist in Resources */,
+				BB8C9C1D298651CB007E7E57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2E2D42867334D3A8AB1E4CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hackathon-project/Pods-hackathon-project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hackathon-project/Pods-hackathon-project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackathon-project/Pods-hackathon-project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D430CF74EAA6079A28730948 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hackathon-project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB8C9C11298651CB007E7E57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB1E8F7C298652F000BF2972 /* UserProfile.swift in Sources */,
+				BB1E8F8D2986539900BF2972 /* DonateView.swift in Sources */,
+				BB1E8F872986536600BF2972 /* LoginView.swift in Sources */,
+				BB1E8F8B2986538800BF2972 /* PhotoPicker.swift in Sources */,
+				BB8C9C19298651CB007E7E57 /* hackathon_projectApp.swift in Sources */,
+				BB1E8F852986535C00BF2972 /* AuthView.swift in Sources */,
+				BB1E8F93298653AD00BF2972 /* DonationsTabView.swift in Sources */,
+				BB1E8F892986536B00BF2972 /* SignUpView.swift in Sources */,
+				BB1E8F7A298652E300BF2972 /* DataManager.swift in Sources */,
+				BB1E8F91298653A700BF2972 /* DonationsView.swift in Sources */,
+				BB1E8F78298652DD00BF2972 /* AuthManager.swift in Sources */,
+				BB1E8F8F2986539F00BF2972 /* DonateTabview.swift in Sources */,
+				BB1E8F7E298652F600BF2972 /* UserEnvObject.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BB8C9C21298651CB007E7E57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BB8C9C22298651CB007E7E57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB8C9C24298651CB007E7E57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2BFB60C3539F66FE9E3F0A1 /* Pods-hackathon-project.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"hackathon-project/Preview Content\"";
+				DEVELOPMENT_TEAM = M45523K7D9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "hackathon-project/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sanchith.hackathon-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB8C9C25298651CB007E7E57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 757EEFAF7C099F26BE153498 /* Pods-hackathon-project.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"hackathon-project/Preview Content\"";
+				DEVELOPMENT_TEAM = M45523K7D9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "hackathon-project/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sanchith.hackathon-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB8C9C10298651CB007E7E57 /* Build configuration list for PBXProject "hackathon-project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8C9C21298651CB007E7E57 /* Debug */,
+				BB8C9C22298651CB007E7E57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB8C9C23298651CB007E7E57 /* Build configuration list for PBXNativeTarget "hackathon-project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8C9C24298651CB007E7E57 /* Debug */,
+				BB8C9C25298651CB007E7E57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB8C9C0D298651CB007E7E57 /* Project object */;
+}
