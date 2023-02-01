@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB0CBDD82987EB2500B532EF /* AddAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0CBDD72987EB2500B532EF /* AddAddressView.swift */; };
+		BB0CBDDA2989391100B532EF /* SelectAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0CBDD92989391100B532EF /* SelectAddressView.swift */; };
 		BB1E8F78298652DD00BF2972 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F77298652DD00BF2972 /* AuthManager.swift */; };
 		BB1E8F7A298652E300BF2972 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F79298652E300BF2972 /* DataManager.swift */; };
 		BB1E8F7C298652F000BF2972 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F7B298652F000BF2972 /* UserProfile.swift */; };
@@ -23,6 +25,7 @@
 		BB8C9C19298651CB007E7E57 /* hackathon_projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C9C18298651CB007E7E57 /* hackathon_projectApp.swift */; };
 		BB8C9C1D298651CB007E7E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8C9C1C298651CB007E7E57 /* Assets.xcassets */; };
 		BB8C9C20298651CB007E7E57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8C9C1F298651CB007E7E57 /* Preview Assets.xcassets */; };
+		BBD25BE629876BA1004374CA /* AccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD25BE529876BA1004374CA /* AccountInfoView.swift */; };
 		F72D44D755C40A2738904951 /* Pods_hackathon_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF9B83585FA8C3A937D68C4 /* Pods_hackathon_project.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,8 @@
 		6DF9B83585FA8C3A937D68C4 /* Pods_hackathon_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathon_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		757EEFAF7C099F26BE153498 /* Pods-hackathon-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-project.release.xcconfig"; path = "Target Support Files/Pods-hackathon-project/Pods-hackathon-project.release.xcconfig"; sourceTree = "<group>"; };
 		B2BFB60C3539F66FE9E3F0A1 /* Pods-hackathon-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathon-project.debug.xcconfig"; path = "Target Support Files/Pods-hackathon-project/Pods-hackathon-project.debug.xcconfig"; sourceTree = "<group>"; };
+		BB0CBDD72987EB2500B532EF /* AddAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressView.swift; sourceTree = "<group>"; };
+		BB0CBDD92989391100B532EF /* SelectAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressView.swift; sourceTree = "<group>"; };
 		BB1E8F77298652DD00BF2972 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BB1E8F79298652E300BF2972 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BB1E8F7B298652F000BF2972 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 		BB8C9C18298651CB007E7E57 /* hackathon_projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackathon_projectApp.swift; sourceTree = "<group>"; };
 		BB8C9C1C298651CB007E7E57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB8C9C1F298651CB007E7E57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BBD25BE529876BA1004374CA /* AccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,8 @@
 				BB1E8F812986530E00BF2972 /* Donor */,
 				BB1E8F802986530900BF2972 /* Charity */,
 				BB1E8F7F2986530400BF2972 /* Volunteer */,
+				BBD25BE529876BA1004374CA /* AccountInfoView.swift */,
+				BB0CBDD72987EB2500B532EF /* AddAddressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +181,7 @@
 				BB8C9C1C298651CB007E7E57 /* Assets.xcassets */,
 				BB8C9C1E298651CB007E7E57 /* Preview Content */,
 				BB1E8F8A2986538800BF2972 /* PhotoPicker.swift */,
+				BB0CBDD92989391100B532EF /* SelectAddressView.swift */,
 			);
 			path = "hackathon-project";
 			sourceTree = "<group>";
@@ -303,9 +312,12 @@
 				BB1E8F7C298652F000BF2972 /* UserProfile.swift in Sources */,
 				BB1E8F8D2986539900BF2972 /* DonateView.swift in Sources */,
 				BB1E8F872986536600BF2972 /* LoginView.swift in Sources */,
+				BB0CBDDA2989391100B532EF /* SelectAddressView.swift in Sources */,
 				BB1E8F8B2986538800BF2972 /* PhotoPicker.swift in Sources */,
 				BB8C9C19298651CB007E7E57 /* hackathon_projectApp.swift in Sources */,
+				BB0CBDD82987EB2500B532EF /* AddAddressView.swift in Sources */,
 				BB1E8F852986535C00BF2972 /* AuthView.swift in Sources */,
+				BBD25BE629876BA1004374CA /* AccountInfoView.swift in Sources */,
 				BB1E8F93298653AD00BF2972 /* DonationsTabView.swift in Sources */,
 				BB1E8F892986536B00BF2972 /* SignUpView.swift in Sources */,
 				BB1E8F7A298652E300BF2972 /* DataManager.swift in Sources */,

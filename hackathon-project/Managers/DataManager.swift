@@ -42,6 +42,48 @@ class DataManager {
         
     }
     
+    public func getAddresses(email: String, accountType: AccountType, completion: @escaping (Bool, [String: String]?) -> Void) {
+        
+        self.firestore.document("\(accountType.rawValue)/\(email)").getDocument { snapshot, error in
+            
+            
+            guard let data = snapshot?.data(), error == nil else {
+                completion(false, nil)
+                return
+            }
+            
+            guard let addresses = data["addresses"] as? [String:String] else {
+                completion(true, nil)
+                return
+            }
+            
+            completion(true, addresses)
+            
+        }
+        
+    }
+    
+    public func addAddress(email: String, accountType: AccountType, address: [String], completion: @escaping (Bool) -> Void) {
+        
+        self.firestore.document("\(accountType.rawValue)/\(email)").setData([
+            "addresses": [
+                address[0]: address[1]
+            ]
+        ], merge: true) { error in
+            
+            guard error == nil else {
+                completion(false)
+                return
+            }
+            
+            completion(true)
+            
+        }
+        
+        
+        
+    }
+    
     public func getImage(url: String, completion: @escaping (UIImage?) -> Void) {
         
         guard let url = URL(string: url) else {
