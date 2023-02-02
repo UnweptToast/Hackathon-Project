@@ -83,7 +83,6 @@ struct AccountInfoView: View {
                                             Text(key)
                                                 .font(.headline)
                                                 .fontWeight(.semibold)
-                                                .padding(3)
                                             
                                             Text(addresses[key]!)
                                                 .font(.subheadline)

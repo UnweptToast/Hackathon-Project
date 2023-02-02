@@ -19,7 +19,8 @@ struct DonateView: View {
     @State var alertPresented = false
     
     @State var foodType = ""
-    @State var qty = 0.0
+    @State var qty = 0
+    @State var qtyString = ""
     
     @State var image: UIImage? = nil
     @State var sourceType: UIImagePickerController.SourceType? = nil
@@ -45,23 +46,30 @@ struct DonateView: View {
                  
                     Section {
                         
-                        TextField("Food type", text: $foodType)
+                        TextField("Food items", text: $foodType)
                         
-                        Picker("Quantity (in Kgs)", selection: $qty) {
-                            Text("0.5").tag(0.5)
-                            Text("1.0").tag(1.0)
-                            Text("1.5").tag(1.5)
-                            Text("2.0").tag(2.0)
-                            Text("2.5").tag(2.5)
-                            Text("3.0").tag(3.0)
-                            Text("3.5").tag(3.5)
-                        }
-                        .pickerStyle(.menu)
+                        TextField("Number of people", text: $qtyString)
+                            .keyboardType(.numberPad)
                         
                     } header: {
                         Text("Create a post")
+                    } footer: {
+                        Text("Approximately how many people can this food serve?")
                     }
-                    
+                    .onChange(of: self.qtyString) { newValue in
+                        
+                        if !newValue.isEmpty {
+                            let QTY = Int(newValue)
+                            
+                            guard let QTY = QTY else {
+                                showAlert("Error logging food quantity. Please try again later.")
+                                return
+                            }
+                            self.qty = QTY
+                        }
+                        
+                    }
+                
                     Section {
                         if let image = image {
                                 ZStack {
@@ -104,8 +112,6 @@ struct DonateView: View {
                                 }
                             
                         }
-                    } footer: {
-                        Text("Upload a photo of the packages of food.")
                     }
                     
                     Section {
@@ -116,7 +122,6 @@ struct DonateView: View {
                                 Text(address[0])
                                     .font(.headline)
                                     .fontWeight(.semibold)
-                                    .padding(3)
                                 
                                 Text(address[1])
                                     .font(.subheadline)
@@ -152,15 +157,57 @@ struct DonateView: View {
                     
                     Section {
                         
-                        Button("Post donation") {
+                        Button {
                             
-                        } 
+                            guard !self.foodType.isEmpty, self.qty != 0 else {
+                                showAlert("Please enter food items and quantity details.")
+                                return
+                            }
+                            
+                            guard let address = self.address, let profile = self.profile else {
+                                showAlert("Please enter an address.")
+                                return
+                            }
+                            
+                            let post = Post(items: self.foodType, qty: self.qty, image: self.image, address: address, info: self.info, status: .posted)
+                            
+                            DataManager.shared.createPost(profile: profile, address: address, post: post) { success in
+                                
+                                guard success else {
+                                    showAlert("Error creating post. Please try agian later.")
+                                    return
+                                }
+                                
+                                self.foodType = ""
+                                self.qty = 0
+                                self.image = nil
+                                self.address = nil
+                                self.info = ""
+                                
+                                showAlert("Donation has been posted! You can view the status of your donations in the acitivity tab.")
+                                
+                            }
+                            
+                        } label: {
+                            
+                            HStack {
+                                
+                                Spacer()
+                                Text("Post")
+                                    .font(.headline)
+                                    .padding(5)
+                                Spacer()
+                                
+                            }
+                            
+                        }
                         
                     }
                     
                 }
                 
             }
+            .scrollDismissesKeyboard(.interactively)
             .navigationTitle("Donate")
             .alert(isPresented: $alertPresented, content: {
                 Alert(title: Text(self.alertMessage))
@@ -174,7 +221,7 @@ struct DonateView: View {
                 
             })
             .actionSheet(isPresented: $showActionSheet) {
-                ActionSheet(title: Text("Please upload an image of your restaurant logo."), buttons: [
+                ActionSheet(title: Text("Upload a photo of the packages of food."), buttons: [
                     
                     Alert.Button.default(Text("Choose from library"), action: {
                         self.sourceType = .photoLibrary

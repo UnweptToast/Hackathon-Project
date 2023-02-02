@@ -21,6 +21,13 @@ struct DonateTabView: View {
                         Label("Donate", systemImage: "house.fill")
                     }
                 
+                ActivitiesView()
+                    .tabItem {
+                        Label("Activities", systemImage: "arrow.up.arrow.down")
+                    }
+                
+                
+                
             }
     }
     
