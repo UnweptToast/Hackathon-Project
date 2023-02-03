@@ -300,6 +300,8 @@ struct DonateView: View {
                     return
                 }
                 
+                ProfileManager.shared.profile = profile
+                
                 self.profile = profile
                 
             }

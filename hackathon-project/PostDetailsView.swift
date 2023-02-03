@@ -428,7 +428,7 @@ struct AcceptedPostDetailsView: View {
                 VStack {
                     
                     if let profile = self.profile {
-                        Text("Donor")
+                        Text(self.currentUser.accountType == .donor ? "Recipient" : "Donor")
                             .font(.title3)
                             .fontWeight(.semibold)
                             .padding(.horizontal)
@@ -491,35 +491,37 @@ struct AcceptedPostDetailsView: View {
                             .tint(.white)
                         }
                         
-                        Button {
-    
-                            self.isCompleted = true
-                            DataManager.shared.completeDonation(post: post) { success in
-                                
-                                guard success else {
-                                    showAlert("An unknown error occured. Please try again.")
-                                    return
+                        if post.post.status != .completed {
+                            Button {
+        
+                                self.isCompleted = true
+                                DataManager.shared.completeDonation(post: post) { success in
+                                    
+                                    guard success else {
+                                        showAlert("An unknown error occured. Please try again.")
+                                        return
+                                    }
+                                    
+                                    self.dismiss()
+                                    
                                 }
                                 
-                                self.dismiss()
+                            } label: {
+                            VStack {
+                                Text("Mark as completed")
+                                    .font(.title3)
+                                    .fontWeight(.semibold)
+                                    .padding(.horizontal)
+                                    .padding(.vertical, 1)
+                                
+                                
                                 
                             }
-                            
-                        } label: {
-                        VStack {
-                            Text("Mark as completed")
-                                .font(.title3)
-                                .fontWeight(.semibold)
-                                .padding(.horizontal)
-                                .padding(.vertical, 1)
-                            
-                            
-                            
-                        }
-                        .padding()
-                        .background(Color(.secondarySystemBackground))
-                        .cornerRadius(20)
-                        .padding(.horizontal)
+                            .padding()
+                            .background(Color(.secondarySystemBackground))
+                            .cornerRadius(20)
+                            .padding(.horizontal)
+                            }
                         }
                         
                     }
@@ -539,7 +541,7 @@ struct AcceptedPostDetailsView: View {
             }
             .onAppear {
                 
-                DataManager.shared.getProfile(email: post.post.by, accountType: .donor) { success, result in
+                DataManager.shared.getProfile(email: currentUser.accountType == .charity ? post.post.by : post.email, accountType: currentUser.accountType == .charity ? .donor : .charity) { success, result in
                     
                     guard let result = result, success else {
                         self.showAlert("Error fetching donor's profile. Please try again later.")

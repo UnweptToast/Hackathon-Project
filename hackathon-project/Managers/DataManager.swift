@@ -25,6 +25,7 @@ class DataManager {
         firestore.document("\(accountType.rawValue)/\(email)").getDocument { snapshot, error in
             
             guard let data = snapshot?.data(), error == nil else {
+                print("ERROR: \(error?.localizedDescription)")
                 completion(false, nil)
                 return
             }
@@ -36,8 +37,6 @@ class DataManager {
             self.getImage(url: pfpUrl) { image in
                 
                 let user = UserProfile(name: name, email: email, phone: phone, accountType: accountType, pfp: image, pfpUrl: pfpUrl)
-                
-                ProfileManager.shared.profile = user
                 
                 completion(true, user)
                 
@@ -403,7 +402,7 @@ class DataManager {
                     return
                 }
                 
-                let history = data["history"] as! [String]
+                let history = (data["history"] as? [String]) ?? []
                 
                 let group = DispatchGroup()
                 
