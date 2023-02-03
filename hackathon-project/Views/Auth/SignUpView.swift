@@ -22,8 +22,6 @@ struct SignUpView: View {
     
     @Environment(\.dismiss) var dismiss
     
-    @State var user: UserEnvObject? = nil
-    
     @State var name = ""
     
     @State var phone = ""
@@ -155,13 +153,11 @@ struct SignUpView: View {
         .fullScreenCover(isPresented: $showHomeScreen) {
             if selectedAccType == .donor {
                 DonateTabView()
-                    .environmentObject(user!)
                     .onAppear {
                         dismiss()
                     }
             } else if selectedAccType == .charity {
                 DonationsTabView()
-                    .environmentObject(user!)
                     .onAppear {
                         dismiss()
                     }
@@ -212,8 +208,6 @@ struct SignUpView: View {
                 self.showAlert = true
                 return
             }
-            
-            self.user = UserEnvObject(profile: UserProfile(profile: user, pfpUrl: imageUrl))
             
             UserDefaults.standard.set(selectedAccType.rawValue, forKey: "accountType")
             print("SELECTED TYPE: \(selectedAccType)")

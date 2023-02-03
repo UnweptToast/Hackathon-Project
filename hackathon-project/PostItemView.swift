@@ -47,6 +47,47 @@ struct PostItemView: View {
     
 }
 
+
+struct AcceptedPostItemView: View {
+    
+    let post: AcceptedPost
+    
+    var body: some View {
+        
+        HStack {
+            VStack(alignment: .leading) {
+                Text(post.post.post.items)
+                    .font(.headline)
+                
+                Text("For \(post.post.post.qty) people approx.")
+                    .foregroundColor(Color(.secondaryLabel))
+                
+            }
+            Spacer()
+            if post.post.status == .posted {
+                Circle()
+                    .frame(width: 10, height: 10)
+                    .foregroundColor(.yellow)
+            }
+            if post.post.status == .accepted {
+                Circle()
+                    .frame(width: 10, height: 10)
+                    .foregroundColor(.green)
+            }
+            if post.post.status == .completed {
+                Circle()
+                    .frame(width: 10, height: 10)
+                    .foregroundColor(.gray)
+            }
+            Text(post.post.status.rawValue.capitalized)
+                .font(.footnote)
+        }
+        
+    }
+    
+}
+
+
 struct PostItemView_Previews: PreviewProvider {
     static var previews: some View {
         List {

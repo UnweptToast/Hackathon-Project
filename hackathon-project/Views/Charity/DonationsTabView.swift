@@ -20,6 +20,11 @@ struct DonationsTabView: View {
                         Label("Donations", systemImage: "indianrupeesign.circle.fill")
                     }
                 
+                DonationsActivitiesView()
+                    .tabItem {
+                        Label("Activity", systemImage: "arrow.up.arrow.down")
+                    }
+                
             }
     }
     

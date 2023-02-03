@@ -1,27 +1,27 @@
 //
-//  ActivitiesView.swift
+//  DonationsActivitiesView.swift
 //  hackathon-project
 //
-//  Created by Sanchith on 2/1/23.
+//  Created by Sanchith on 2/3/23.
 //
 
 import Foundation
 import SwiftUI
 
-struct ActivitiesView: View {
+struct DonationsActivitiesView: View {
     
     @State var liveActivity: Post? = nil
+    @State var liveActivites: [AcceptedPost]? = nil
     
     @State var history: [AcceptedPost]? = nil
     
     @State var liveActivityFetched = false
     @State var historyFetched = false
+    @State var liveActivitesFetched = false
     
     @State var alertPresented = false
     @State var alertMessage = ""
-    
-    @State var showLiveActivityDetails = false
-    
+
     @State var selectedActivity: AcceptedPost? = nil
     
     @State var profile: UserProfile? = nil
@@ -33,13 +33,17 @@ struct ActivitiesView: View {
                 
                 Section {
                     
-                    if liveActivityFetched {
-                        if let liveActivity = self.liveActivity {
+                    if let liveActivites = self.liveActivites, self.liveActivitesFetched {
+                        if liveActivites.count != 0 {
 
-                            Button {
-                                self.showLiveActivityDetails = true
-                            } label: {
-                                PostItemView(post: liveActivity)
+                            ForEach(liveActivites) { post in
+                                
+                                Button {
+                                    self.selectedActivity = post
+                                } label: {
+                                    AcceptedPostItemView(post: post)
+                                }
+                                
                             }
 
                             
@@ -71,13 +75,13 @@ struct ActivitiesView: View {
                         
                     } else {
                         
-                        Text("You haven't made any donations in the past.")
+                        Text("You haven't received any donations in the past.")
                             .foregroundColor(Color(.secondaryLabel))
                         
                     }
                     
                 } header: {
-                    Text("Past donations")
+                    Text("History")
                 }
                 
             }
@@ -91,12 +95,21 @@ struct ActivitiesView: View {
                 }
                 
                 self.profile = profile
-                
-                DataManager.shared.getLivePost(profile: profile) { post in
+            
+                DataManager.shared.getLiveDonations(profile: profile) { success, posts in
                     
-                    self.liveActivity = post
-                    self.liveActivityFetched = true
-                    print("DONE")
+                    guard success else {
+                        showAlert("Could not fetch live activities.")
+                        return
+                    }
+                    
+                    self.liveActivites = posts
+                    self.liveActivitesFetched = true
+                    
+                    
+                    
+                    print("LIVE ACTIVITIES FETCHED")
+                    
                 }
                 
                 DataManager.shared.getHistory(profile: profile) { success, posts in
@@ -117,11 +130,6 @@ struct ActivitiesView: View {
             
             if let profile = self.profile {
                 AcceptedPostDetailsView(currentUser: profile, post: post)
-            }
-        }
-        .sheet(isPresented: $showLiveActivityDetails) {
-            if let liveActivity = self.liveActivity, let profile = self.profile {
-                PostDetailsView(currentUser: profile, post: liveActivity)
             }
         }
         

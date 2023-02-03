@@ -1,47 +1,48 @@
 //
-//  Post.swift
+//  DonorPost.swift
 //  hackathon-project
 //
-//  Created by Sanchith on 2/1/23.
+//  Created by Sanchith on 2/2/23.
 //
 
 import Foundation
-import UIKit
 
-struct Post {
+struct DonorPost: Identifiable {
     
-    let items: String
-    let qty: Int
-    var image: UIImage?
-    let address: [String]
-    let info: String
-    let status: DonationStatus?
-    let to: AcceptedBy?
-    
-    init(items: String, qty: Int, image: UIImage? = nil, address: [String], info: String, status: DonationStatus?) {
-        self.items = items
-        self.qty = qty
-        self.image = image
-        self.address = address
-        self.info = info
-        self.status = status
-        self.to = nil
-    }
-    
-    init(post: Post, to: AcceptedBy) {
-        self.items = post.items
-        self.qty = post.qty
-        self.image = post.image
-        self.address = post.address
-        self.info = post.info
-        self.status = post.status
-        self.to = to
-    }
+    let id = UUID()
+    let by: String
+    let post: NoImagePost
+    let status: DonationStatus
     
 }
 
-struct AcceptedBy {
-    let address: String
-    let email: String
+struct NoImagePost {
+    
+    let items: String
+    let qty: Int
+    let imageUrl: String?
+    let address: [String]
     let info: String
+    let status: DonationStatus?
+    
+    init(items: String, qty: Int, imageUrl: String?, address: [String], info: String, status: DonationStatus?) {
+        self.items = items
+        self.qty = qty
+        self.imageUrl = imageUrl
+        self.address = address
+        self.info = info
+        self.status = status
+    }
+    
+    init(post: Post, imageUrl: String) {
+        
+        self.items = post.items
+        self.qty = post.qty
+        self.address = post.address
+        self.info = post.info
+        self.status = post.status
+        self.imageUrl = imageUrl
+        
+    }
+    
 }

@@ -142,10 +142,6 @@ struct DonateView: View {
                             }
                         }
                         
-                    } footer: {
-                        
-                        Text("This address is from where your donation will be picked up.")
-                        
                     }
                     
                     Section {
@@ -180,6 +176,7 @@ struct DonateView: View {
                                 
                                 self.foodType = ""
                                 self.qty = 0
+                                self.qtyString = ""
                                 self.image = nil
                                 self.address = nil
                                 self.info = ""
