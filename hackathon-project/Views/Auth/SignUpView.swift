@@ -18,12 +18,6 @@ enum AccountType: String, CaseIterable, Identifiable {
 
 struct SignUpView: View {
     
-    init() {
-            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-
-            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-        }
-    
     @Environment(\.colorScheme) var colorScheme
     
     @Environment(\.dismiss) var dismiss

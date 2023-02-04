@@ -11,12 +11,6 @@ import FirebaseAuth
 
 struct LoginView: View {
     
-    init() {
-            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-
-            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-        }
-    
     @Environment(\.dismiss) var dismiss
     
     @State var email = ""

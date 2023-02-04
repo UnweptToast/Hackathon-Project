@@ -13,12 +13,6 @@ struct AuthView: View {
     
     @State var showHomeScreen = false
     
-    init() {
-            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.black]
-
-            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.black]
-        }
-    
     var body: some View {
         
         NavigationView {
