@@ -22,9 +22,8 @@
 		BB1E8F91298653A700BF2972 /* DonationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F90298653A700BF2972 /* DonationsView.swift */; };
 		BB1E8F93298653AD00BF2972 /* DonationsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E8F92298653AD00BF2972 /* DonationsTabView.swift */; };
 		BB1E8F952986546300BF2972 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB1E8F942986546300BF2972 /* GoogleService-Info.plist */; };
-		BB389F4D298A35AC003DD7C4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB389F4C298A35AC003DD7C4 /* CustomTextField.swift */; };
 		BB389F4F298A37D2003DD7C4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB389F4E298A37D2003DD7C4 /* Post.swift */; };
-		BB389F51298ADBA5003DD7C4 /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB389F50298ADBA5003DD7C4 /* ActivitiesView.swift */; };
+		BB389F51298ADBA5003DD7C4 /* DonateActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB389F50298ADBA5003DD7C4 /* DonateActivitiesView.swift */; };
 		BB389F53298AE300003DD7C4 /* DonationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB389F52298AE300003DD7C4 /* DonationStatus.swift */; };
 		BB389F55298AE362003DD7C4 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB389F54298AE362003DD7C4 /* ProfileManager.swift */; };
 		BB389F57298AEFFD003DD7C4 /* PostItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB389F56298AEFFD003DD7C4 /* PostItemView.swift */; };
@@ -62,9 +61,8 @@
 		BB1E8F92298653AD00BF2972 /* DonationsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsTabView.swift; sourceTree = "<group>"; };
 		BB1E8F942986546300BF2972 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BB1E8F96298654AC00BF2972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		BB389F4C298A35AC003DD7C4 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BB389F4E298A37D2003DD7C4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		BB389F50298ADBA5003DD7C4 /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
+		BB389F50298ADBA5003DD7C4 /* DonateActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateActivitiesView.swift; sourceTree = "<group>"; };
 		BB389F52298AE300003DD7C4 /* DonationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationStatus.swift; sourceTree = "<group>"; };
 		BB389F54298AE362003DD7C4 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		BB389F56298AEFFD003DD7C4 /* PostItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItemView.swift; sourceTree = "<group>"; };
@@ -111,6 +109,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BB19C795298E0D9A003188A5 /* Accessory Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB0CBDD72987EB2500B532EF /* AddAddressView.swift */,
+				BBD25BE529876BA1004374CA /* AccountInfoView.swift */,
+				BB389F56298AEFFD003DD7C4 /* PostItemView.swift */,
+				BB389F5C298BBF54003DD7C4 /* DonationItemView.swift */,
+				BB389F58298B5B9B003DD7C4 /* PostDetailsView.swift */,
+				BB0CBDD92989391100B532EF /* SelectAddressView.swift */,
+				BB1E8F8A2986538800BF2972 /* PhotoPicker.swift */,
+				BB389F60298CEEC1003DD7C4 /* AcceptDonationView.swift */,
+				BB389F5E298BF752003DD7C4 /* DonorPostDetailsView.swift */,
+			);
+			path = "Accessory Views";
+			sourceTree = "<group>";
+		};
 		BB1E8F74298652B500BF2972 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,8 +145,6 @@
 				BB1E8F812986530E00BF2972 /* Donor */,
 				BB1E8F802986530900BF2972 /* Charity */,
 				BB1E8F7F2986530400BF2972 /* Volunteer */,
-				BBD25BE529876BA1004374CA /* AccountInfoView.swift */,
-				BB0CBDD72987EB2500B532EF /* AddAddressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,7 +181,7 @@
 			children = (
 				BB1E8F8C2986539900BF2972 /* DonateView.swift */,
 				BB1E8F8E2986539F00BF2972 /* DonateTabview.swift */,
-				BB389F50298ADBA5003DD7C4 /* ActivitiesView.swift */,
+				BB389F50298ADBA5003DD7C4 /* DonateActivitiesView.swift */,
 			);
 			path = Donor;
 			sourceTree = "<group>";
@@ -213,14 +225,7 @@
 				BB1E8F74298652B500BF2972 /* Models */,
 				BB8C9C1C298651CB007E7E57 /* Assets.xcassets */,
 				BB8C9C1E298651CB007E7E57 /* Preview Content */,
-				BB1E8F8A2986538800BF2972 /* PhotoPicker.swift */,
-				BB0CBDD92989391100B532EF /* SelectAddressView.swift */,
-				BB389F4C298A35AC003DD7C4 /* CustomTextField.swift */,
-				BB389F56298AEFFD003DD7C4 /* PostItemView.swift */,
-				BB389F58298B5B9B003DD7C4 /* PostDetailsView.swift */,
-				BB389F5E298BF752003DD7C4 /* DonorPostDetailsView.swift */,
-				BB389F5C298BBF54003DD7C4 /* DonationItemView.swift */,
-				BB389F60298CEEC1003DD7C4 /* AcceptDonationView.swift */,
+				BB19C795298E0D9A003188A5 /* Accessory Views */,
 			);
 			path = "hackathon-project";
 			sourceTree = "<group>";
@@ -354,7 +359,7 @@
 				BB389F63298D0796003DD7C4 /* DonationsActivitiesView.swift in Sources */,
 				BB389F5B298B9F02003DD7C4 /* DonorPost.swift in Sources */,
 				BB389F65298D08F6003DD7C4 /* AcceptedPost.swift in Sources */,
-				BB389F51298ADBA5003DD7C4 /* ActivitiesView.swift in Sources */,
+				BB389F51298ADBA5003DD7C4 /* DonateActivitiesView.swift in Sources */,
 				BB1E8F8D2986539900BF2972 /* DonateView.swift in Sources */,
 				BB1E8F872986536600BF2972 /* LoginView.swift in Sources */,
 				BB0CBDDA2989391100B532EF /* SelectAddressView.swift in Sources */,
@@ -364,7 +369,6 @@
 				BB8C9C19298651CB007E7E57 /* hackathon_projectApp.swift in Sources */,
 				BB0CBDD82987EB2500B532EF /* AddAddressView.swift in Sources */,
 				BB1E8F852986535C00BF2972 /* AuthView.swift in Sources */,
-				BB389F4D298A35AC003DD7C4 /* CustomTextField.swift in Sources */,
 				BB389F55298AE362003DD7C4 /* ProfileManager.swift in Sources */,
 				BBD25BE629876BA1004374CA /* AccountInfoView.swift in Sources */,
 				BB389F53298AE300003DD7C4 /* DonationStatus.swift in Sources */,

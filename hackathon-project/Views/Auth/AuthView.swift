@@ -13,6 +13,12 @@ struct AuthView: View {
     
     @State var showHomeScreen = false
     
+    init() {
+            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+
+            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.black]
+        }
+    
     var body: some View {
         
         NavigationView {
@@ -44,7 +50,17 @@ struct AuthView: View {
 
                 
             }
-            .navigationTitle(Text("Hackathon Project"))
+            .navigationTitle(Text("FoodHive"))
+            .background {
+                
+                Image("App background 1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .ignoresSafeArea()
+                    
+                    
+                    
+            }
             .fullScreenCover(isPresented: $showHomeScreen) {
                 
                 let accType = UserDefaults.standard.value(forKey: "accountType") as? String ?? ""
